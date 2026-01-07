@@ -1,0 +1,221 @@
+﻿@page "/"
+@inject IJSRuntime JS
+
+<PageTitle>Portafolio</PageTitle>
+
+<div class="sidebar" aria-label="Barra lateral">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:20px;">
+        <img src="/imgs/perfil.jpg" alt="Foto de perfil de Diego Núñez Valencia" loading="lazy" />
+        <h3>DIEGO NUÑEZ VALENCIA</h3>
+    </div>
+
+    <nav aria-label="Navegación principal">
+        <a href="#home">HOME</a>
+        <hr />
+        <a href="#projects">PROJECTS</a>
+        <hr />
+        <a href="#skills">SKILLS</a>
+        <hr />
+        <a href="#aboutme">ABOUT ME</a>
+        <hr />
+        <a href="#contact">CONTACT</a>
+    </nav>
+</div>
+
+<main class="main-content" role="main">
+    <section id="home" style="min-height:100vh; display:flex; justify-content:center; flex-direction:column; padding:3rem 2rem;">
+        <header>
+            <h1 style="font-weight:350; text-align:center; max-width:1000px; margin:0 auto; color:var(--color-terciario);">Software Developer specialized in C# and .NET</h1>
+            <p style="text-align:center; font-weight:300; max-width:1000px; margin:1rem auto;">I create administrative systems, desktop applications and web applications focused on real business solutions.</p>
+        </header>
+
+        <div style="width:100%; display:flex; justify-content:center; gap:20px; margin:20px 0; flex-wrap:wrap;">
+            <a class="btn btn-uno" href="/docs/CV_Diego_Nunez_Valencia.pdf" download>Download CV</a>
+            <a class="btn btn-outline-uno" href="#projects">Projects</a>
+            <a class="btn btn-outline-uno" href="#contact">Contact</a>
+        </div>
+    </section>
+
+    @* projects *@
+    <section id="projects" style="padding:5rem 2rem;">
+        <h1 style="font-weight:350; text-align:center; margin-bottom:5rem;">Featured Projects</h1>
+
+        <div style="display:flex; gap:50px; justify-content:center; flex-wrap:wrap;">
+            <div style="border-radius:8px; width:400px; height:750px; background-color:var(--color-secundario);">
+                <div style="background-color:var(--color-terciario); height:100px; border-top-left-radius:8px; border-top-right-radius:8px; padding:1rem;">
+                    <h4 style="color:var(--color-blanco);">Nexuz System</h4>
+                    <p style="color:var(--color-blanco); ">Administrative System for Businesses</p>
+                </div>
+                <div style="display:flex; flex-direction:column; justify-content:space-between; height:650px;">
+                    <div style="padding:1rem;">
+                        <h5 style="color:var(--color-blanco)">Technologies: C#, Windows Forms, SQL Server</h5>
+                        <p style="margin:10px 0;">Complete system for businesses that handle physical products.</p>
+                        <p style="font-weight:550;">Main functions:</p>
+                        <ul style="gap:15px;">
+                            <li style="margin:8px 0;">Catalogs of clients, products, suppliers</li>
+                            <li style="margin:8px 0;">Inventory control</li>
+                            <li style="margin:8px 0;">Purchases and inventory adjustments</li>
+                            <li style="margin:8px 0;">Product Bundles</li>
+                            <li style="margin:8px 0;">Point of sale</li>
+                            <li style="margin:8px 0;">Sales reports with graphs</li>
+                        </ul>
+                    </div>
+                    <div style="padding:1rem;">
+                        <img src="/imgs/nexuz_pv.jpeg" style="border-radius:8px; width:100%;"/>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div style="border-radius:8px; width:400px; height:750px; background-color:var(--color-secundario);">
+                <div style="background-color:var(--color-terciario); height:100px; border-top-left-radius:8px; border-top-right-radius:8px; padding:1rem;">
+                    <h4 style="color:var(--color-blanco);">X206 Application</h4>
+                    <p style="color:var(--color-blanco); ">Medical Management Application</p>
+                </div>
+                <div style="display:flex; flex-direction:column; justify-content:space-between; height:650px;">
+                    <div style="padding:1rem;">
+                        <h5 style="color:var(--color-blanco)">Technologies: Blazor, C#, HTML, CSS, SQL Server</h5>
+                        <p style="margin:10px 0;">Application focused on doctors and offices.</p>
+                        <p style="font-weight:550;">Main functions:</p>
+                        <ul style="gap:15px;">
+                            <li style="margin:8px 0;">Patient registration</li>
+                            <li style="margin:8px 0;">Clinical history</li>
+                            <li style="margin:8px 0;">Appointment calendar</li>
+                            <li style="margin:8px 0;">Query log</li>
+                        </ul>
+                    </div>
+                    <div style="padding:1rem;">
+                        <img src="/imgs/x206_paginaprincipal.png" style="border-radius:8px; width:100%;" />
+                    </div>
+                </div>
+                
+            </div>
+
+            <div style="border-radius:8px; width:400px; height:750px; background-color:var(--color-secundario);">
+                <div style="background-color:var(--color-terciario); height:100px; border-top-left-radius:8px; border-top-right-radius:8px; padding:1rem;">
+                    <h4 style="color:var(--color-blanco);">QReator Application</h4>
+                    <p style="color:var(--color-blanco);">Web Application with Blazor</p>
+                </div>
+                <div style="display:flex; flex-direction:column; justify-content:space-between; height:650px;">
+                    <div style="padding:1rem;">
+                        <h5 style="color:var(--color-blanco)">Technologies: Blazor, C#, HTML, CSS, SQL Server</h5>
+                        <p style="margin:10px 0;">Web application with side menu and interactive menu creator.</p>
+                        <p style="font-weight:550;">Main functions:</p>
+                        <ul style="gap:15px;">
+                            <li style="margin:8px 0;">QR generator</li>
+                            <li style="margin:8px 0;">Interactive buttons</li>
+                            <li style="margin:8px 0;">Dynamic color selection</li>
+                            <li style="margin:8px 0;">Automatic format change</li>
+                        </ul>
+                    </div>
+                    <div style="padding:1rem;">
+                        <img src="/imgs/qrator_editor.png" style="border-radius:8px; width:100%;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @* Skills *@
+    <section id="skills" style="padding:5rem 2rem;">
+        <h1 style="font-weight:350; text-align:center; margin-bottom:5rem;">Technical Skills</h1>
+
+        <div style="display:flex; gap:50px; justify-content:center; flex-wrap:wrap;">
+            <div style="border-radius:8px; border:solid 5px var(--color-terciario); width:300px; height:400px; background-color:var(--color-blanco); padding:1rem;">
+                <h4 style="color:var(--color-terciario);">Languages</h4>
+                <ul style="margin-top:30px; color:var(--color-secundario);">
+                    <li style="margin:8px 0;">C#</li>
+                    <li style="margin:8px 0;">HTML</li>
+                    <li style="margin:8px 0;">CSS</li>
+                    <li style="margin:8px 0;">SQL</li>
+                    <li style="margin:8px 0;">Python (learning)</li>
+                </ul>
+            </div>
+
+            <div style="border-radius:8px; border:solid 5px var(--color-terciario); width:300px; height:400px; background-color:var(--color-blanco); padding:1rem;">
+                <h4 style="color:var(--color-terciario);">Frameworks & Platforms</h4>
+                <ul style="margin-top:30px; color:var(--color-secundario);">
+                    <li style="margin:8px 0;">.NET</li>
+                    <li style="margin:8px 0;">Blazor</li>
+                    <li style="margin:8px 0;">Windows Forms</li>
+                    <li style="margin:8px 0;">Visual Studio</li>
+                    <li style="margin:8px 0;">Visual Studio Code</li>
+                </ul>
+            </div>
+
+            <div style="border-radius:8px; border:solid 5px var(--color-terciario); width:300px; height:400px; background-color:var(--color-blanco); padding:1rem;">
+                <h4 style="color:var(--color-terciario);">Data Bases</h4>
+                <ul style="margin-top:30px; color:var(--color-secundario);">
+                    <li style="margin:8px 0;">SQL Server</li>
+                    <li style="margin:8px 0;">Relational database design</li>
+                </ul>
+            </div>
+
+            <div style="border-radius:8px; border:solid 5px var(--color-terciario); width:300px; height:400px; background-color:var(--color-blanco); padding:1rem;">
+                <h4 style="color:var(--color-terciario);">Others</h4>
+                <ul style="margin-top:30px; color:var(--color-secundario);">
+                    <li style="margin:8px 0;">Systems architecture</li>
+                    <li style="margin:8px 0;">Advanced CRUDs</li>
+                    <li style="margin:8px 0;">Charts and reports</li>
+                    <li style="margin:8px 0;">Inventory control</li>
+                    <li style="margin:8px 0;">Interface design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    @* About me *@
+    <section id="aboutme" style="padding:5rem 25%; background-color:var(--color-secundario);">
+        <h1 style="font-weight:350; text-align:center; margin-bottom:5rem;">About Me</h1>
+
+        <h5 style="margin:10px 0; font-weight:350;">I am a software developer with 3 years of experience creating custom administrative systems for businesses that handle physical products and internal processes.</h5>
+        <h5 style="margin:10px 0; font-weight:350;">I work mainly with C#, .NET, Visual Studio and SQL Server, developing Windows Forms and Blazor Web Apps.</h5>
+        <h5 style="margin:10px 0; font-weight:350;">I focus on creating functional, scalable and easy-to-use software, first understanding the business problem before writing code.</h5>
+        <h5 style="margin:10px 0; font-weight:350;">I am currently constantly learning in areas such as software architecture and AI.</h5>
+    </section>
+
+    <section style="padding:5rem 2rem;">
+        <h1 style="font-weight:350; text-align:center; margin-bottom:5rem;">Solutions I Offer</h1>
+
+        <div style="display:flex; gap:50px; justify-content:center; flex-wrap:wrap; color:var(--color-terciario);">
+            <div style="border-radius:8px; background-color:var(--color-blanco); padding:2rem; ">
+                <h4 style="font-weight:400">Digitize manual processes</h4>
+            </div>
+
+            <div style="border-radius:8px; background-color:var(--color-blanco); padding:2rem;">
+                <h4 style="font-weight:400">Create administrative systems from scratch</h4>
+            </div>
+
+            <div style="border-radius:8px; background-color:var(--color-blanco); padding:2rem;">
+                <h4 style="font-weight:400">Automate inventories and sales</h4>
+            </div>
+
+            <div style="border-radius:8px; background-color:var(--color-blanco); padding:2rem;">
+                <h4 style="font-weight:400">Develop internal applications for companies</h4>
+            </div>
+
+            <div style="border-radius:8px; background-color:var(--color-blanco); padding:2rem;">
+                <h4 style="font-weight:400">Create custom web applications</h4>
+            </div>
+        </div>
+    </section>
+
+
+
+    @* Contact *@
+    <section id="contact" style="padding:5rem 25%; background-color:var(--color-secundario);">
+        <h1 style="font-weight:350; text-align:center; margin-bottom:3rem;">Contact</h1>
+
+        <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+            <a class="btn btn-uno" href="mailto:diegonuva26@gmail.com">Email</a>
+            <a class="btn btn-uno" href="https://www.linkedin.com/in/diego-nuva-softwaredev/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-uno" href="https://github.com/DiegoNuva">Github</a>
+        </div>
+
+        <p style="margin-top:30px; font-weight:300; text-align:center;">"I know how to create real systems that work in real businesses"</p>
+    </section>
+</main>
+
+@code {
+    
+}
